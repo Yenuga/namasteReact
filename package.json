@@ -1,0 +1,30 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is My React\r on 8/4 I am updating te Basic foundations with react using creatteElemeent and CDN links",
+  "scripts": {
+    "start": " parcel index.html",
+    "build": " parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yenuga/namasteReact.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Yenuga/namasteReact/issues"
+  },
+  "homepage": "https://github.com/Yenuga/namasteReact#readme",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "reactdom": "^2.0.0"
+  }
+}
