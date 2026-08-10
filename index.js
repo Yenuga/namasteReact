@@ -10,14 +10,23 @@ import ReactDom from "react-dom/client";
 //   ]),
 // );
 
+// this is just a react element
 // const headingreact = React.createElement("h1", {}, "Hello world from React");
 
-const heading = (
+const Heading = () => (
   <h1>This is heading exlample which is JSX trnspiled in to html content</h1>
 );
 
-const Heading = () => <h1>Heading from functional component</h1>;
+const Heading = () => {
+  return (
+    <div>
+      <h1>Heading from functional component</h1>;
+      <Heading />
+      {/* this is called component composition  where we rendered one code inside another */}
+    </div>
+  );
+};
 const rootReact = ReactDom.createRoot(document.getElementById("root"));
-const rootReact2 = ReactDom.createRoot(document.getElementById("root2"));
+// const rootReact2 = ReactDom.createRoot(document.getElementById("root2"));
 rootReact.render(<Heading />);
-rootReact2.render(heading);
+// rootReact2.render(heading);
