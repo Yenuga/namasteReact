@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: grid;
+        /* place-items: top; */
+        /* grid-template-rows: 300px; */
+        grid-template-columns: min-content;
+        place-content: center;
+      }
+      img {
+        grid-row: 1;
+        grid-column: 1;
+      }
+      p {
+        grid-row: 1;
+        grid-column: 1;
+        place-self: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="./grd.jpg" alt="check" />
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro libero
+        quaerat velit laboriosam voluptatem, ducimus laborum, dolorem quam eos
+        numquam ipsa, sit atque? Ea ratione itaque quam, similique voluptates
+        laboriosam.
+      </p>
+    </div>
+  </body>
+</html>
