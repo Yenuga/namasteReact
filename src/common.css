@@ -1,0 +1,42 @@
+.logo {
+  max-width: 50px;
+  max-height: 100px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.nav-items {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+  justify-content: space-evenly;
+  margin-right: 10px;
+}
+.img-restraunt {
+  max-width: 300px;
+  max-height: 300px;
+}
+.restraunt-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+  justify-items: top;
+  align-items: top;
+  gap: 10px;
+}
+
+.res-card {
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+}
+
+/* .res-card :hover {
+  border: 2px solid black;
+} */

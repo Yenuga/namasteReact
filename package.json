@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This is My React\r on 8/4 I am updating te Basic foundations with react using creatteElemeent and CDN links",
   "scripts": {
-    "start": " parcel index.html",
-    "build": " parcel build index.html",
+    "start": " parcel ./src/index.html",
+    "build": " parcel build ./src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,7 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Yenuga/namasteReact/issues"
   },
@@ -24,7 +23,6 @@
   },
   "dependencies": {
     "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "reactdom": "^2.0.0"
+    "react-dom": "^19.2.8"
   }
 }
