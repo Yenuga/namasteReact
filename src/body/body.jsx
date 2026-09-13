@@ -1,23 +1,31 @@
 import RestrauntCard from "./restraunt-card";
 import { restaurants } from "../mock/data";
 import { useState, useEffect } from "react";
-import { fetchData } from "../services/fetch-res-data";
+import { fetchData, updateNextResList } from "../services/fetch-res-data";
 import { SearchInput } from "./searchBox";
+import PlaceHolder from "./place-holder-newres";
 
 const Body = () => {
   const [isVeg, setIsVeg] = useState(false);
   const [showTopRated, setShowTopRated] = useState(false);
-  const [filteredRestraunts, setFilteredRestraunts] = useState(restaurants);
-  const [allRestraunts, setAllRestrants] = useState(restaurants);
+  const [filteredRestraunts, setFilteredRestraunts] = useState([]);
+  const [allRestraunts, setAllRestrants] = useState([]);
+  const [nextOffset, setNextOffset] = useState();
 
   useEffect(() => {
     getData();
+    // updateNextResList();
   }, []);
 
   const getData = async () => {
-    const data = await fetchData();
-    // console.log(data?.data?.cards);
-    // setAllRestrants(data?.data?.cards);
+    const { pageOffset, resData } = await fetchData();
+    setAllRestrants((prev) => {
+      return [...resData, ...prev];
+    });
+    setFilteredRestraunts((prev) => {
+      return [...resData, ...prev];
+    });
+    setNextOffset(pageOffset);
   };
 
   useEffect(() => {
@@ -58,6 +66,7 @@ const Body = () => {
           return <RestrauntCard key={res?.info?.id} resData={res} />;
         })}
       </div>
+      <PlaceHolder getData={getData} />
     </div>
   );
 };

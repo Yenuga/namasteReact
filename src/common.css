@@ -60,6 +60,25 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 }
+
+/* to make button to look green when active */
 .active {
   background-color: green;
+}
+
+/*  this css to  make search icon to fit inside input box */
+
+.SearchInputcontainer {
+  position: relative;
+  display: inline;
+  margin: 2px;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+.SearchInput {
+  padding: 5px;
 }

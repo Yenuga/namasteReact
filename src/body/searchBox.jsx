@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDeounce } from "../utils/useDebounce";
+import { FaSearch } from "react-icons/fa";
 
 export const SearchInput = ({ allRestraunts, setFilteredRestraunts }) => {
   const [searchText, setSearchText] = useState("");
@@ -23,13 +24,17 @@ export const SearchInput = ({ allRestraunts, setFilteredRestraunts }) => {
 
   return (
     <div className="Search">
-      <input
-        type="text"
-        id="search"
-        value={searchText}
-        onChange={onsearchInputChange}
-        autoComplete={"false"}
-      />
+      <div className="SearchInputcontainer">
+        <input
+          type="text"
+          id="search"
+          value={searchText}
+          onChange={onsearchInputChange}
+          autoComplete="off"
+          className="SearchInput"
+        />
+        <FaSearch className="searchIcon" />
+      </div>
       <button
         onClick={() => {
           setFilteredRestraunts(allRestraunts);
@@ -39,6 +44,7 @@ export const SearchInput = ({ allRestraunts, setFilteredRestraunts }) => {
       >
         Clear
       </button>
+
       {searchFiltered?.length === 0 && (
         <div>
           No Results found for your search. Please try in a different way
